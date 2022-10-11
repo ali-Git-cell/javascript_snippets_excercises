@@ -22,3 +22,24 @@ function validPassword(password, username){
 }
 
 //validPassword("Thepassword123", "theusername")
+
+
+
+// A pangram is scentence that contains very aphabet letter.
+
+// The quick fox jumps over the lazy dog
+
+function isPangram(scentence){
+  let alphas = "abcdefghijklmnopqrstuvwxyz";
+  scentence = scentence.toLowerCase();
+  
+  for(let i = 0; i < alphas.length; i++){
+    if(!scentence.includes(alphas[i])){
+      return false
+    }
+  }
+  return true
+}
+
+
+// isPangram("The quick brown fox jumps over the lazy dog")

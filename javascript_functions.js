@@ -43,3 +43,36 @@ function isPangram(scentence){
 
 
 // isPangram("The quick brown fox jumps over the lazy dog")
+
+
+
+
+
+
+
+
+
+// Card returning function
+
+// random values
+// 1,2,3,4,5,6,7,6,9,10,J,Q,K,A
+// random suits
+// clubs, spades, hearts, diamonds
+const val = [1,2,3,4,5,6,7,6,9,10,"J","Q","K","A"];
+const suit = ["clubs", "spades", "hearts", "diamonds"];
+
+const ran1 = Math.floor(Math.random() * 14);
+const ran2 = Math.floor(Math.random() * 4)
+
+
+function getCard(){
+  let obj = {value: "", 
+             suit: ""};
+  obj.value = val[ran1];
+  obj.suit = suit[ran2];
+  return obj;
+}
+
+
+// getCard()
+// getCard()

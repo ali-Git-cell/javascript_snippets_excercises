@@ -76,3 +76,43 @@ function getCard(){
 
 // getCard()
 // getCard()
+
+
+
+// The `isItValidName(..) function takes one parameter called `name`. The validator returns `true` if all the following requirements are met by the parameter.
+
+	// - name must be a string
+	// - name must be non-empty
+	// - name must contain non-whitespace of at least 3 characters
+
+function isItValidName(name){
+  if (typeof name == "string" && name.trim().length >= 3){
+       return true   
+  } else {
+    return false
+  }
+}
+
+
+ // The `hoursAttended(..)`  that takes two parameters called `attended` and `length`. it only returns `true` if all the following match the two parameters.
+
+	//- either parameter may only be a string or number
+	//- both parameters should be treated as numbers
+	//- both numbers must be 0 or higher
+	//- both numbers must be whole numbers
+	//- `attended` must be less than or equal to `length`
+
+function attendedHours(attended, length){
+  
+  if(typeof attended == "string" && attended.trim() != ""){
+    attended = Number(attended)
+  }
+    if(typeof length == "string" && length.trim() != ""){
+    length = Number(length)
+  }
+  if(typeof attended == "number" && typeof length == "number" && attended >= 0 && length >= 0 && Number.isInteger(attended) && Number.isInteger(length) && attended <= length){
+    return true
+  }
+  return false;
+
+}

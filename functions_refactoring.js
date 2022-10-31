@@ -1,4 +1,7 @@
 // ******************************** Functions refactoring excercise ********************************
+// Both versions of the 3 Functions, 1st version with function declaration and the 2nd version with Arrow functions are below.
+
+
 
 function printRecords(recordIds) {
  const map1 = []
@@ -181,9 +184,3 @@ remindUnpaid(currentEnrollment);
 	Henry (105): Not Paid
 */
 
-	Peter (250): Paid
-	Sarah (375): Paid
-	Suzy (410): Paid
-	Bob (664): Not Paid
-	Henry (105): Not Paid
-*/

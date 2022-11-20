@@ -16,7 +16,7 @@ function recursiveCountdown(num){
   recursiveCountdown(num - 1)
 }
 
-//recursiveCountdown(7)
+recursiveCountdown(7)
 
 
 
@@ -30,7 +30,7 @@ function countRange(n, total = 0){
  return countRange(n - 1, total + n)
 }
 
-//countRange(6)
+countRange(6)
 
 
 
@@ -57,4 +57,37 @@ function printChildObjects(obj){
 }
 
 
-//printChildObjects(familyTree)
+printChildObjects(familyTree)
+
+
+
+
+
+// 4th function example with details
+// sum with for loop
+
+function totalSum(numbers){
+  
+  if (numbers.length === 1)
+  {  // base case
+    return numbers[0];
+  }
+  
+  else {
+    // recursive case
+    return numbers[0] + totalSum(numbers.slice(1));
+  }
+  
+  
+}
+
+
+totalSum([0,1,2,3,4])
+
+
+//firstcall  0 + plus return value
+  //totalSum(1234)  + 1 returned value from below
+    //totalSum(234)   + 2  plus return value
+      //totalSum(34)   + 3 plus return value
+       // totalSum(4)   returns 4
+

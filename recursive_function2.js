@@ -38,10 +38,18 @@ function iterativeFibonacci(n) {
 
 
 //Fibonacci Series using Recursion
-    function fibonacci(n) {
+    function recibonacci(n) {
     if (n <= 1)
         return n;
     return fibonacci(n-1) + fibonacci(n-2);
 }
 
-//fibonacci(6)
+//recibonacci(6)
+
+//Fibonacci Series using Recursion(alternative to the above func)
+function recibonacci(n) {
+  if (n === 0) return 0;
+  if (n === 1) return 1;
+  return recursiveFibonacci(n - 2) + recursiveFibonacci(n - 1);
+}
+//recibonacci(6)

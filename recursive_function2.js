@@ -53,3 +53,23 @@ function recibonacci(n) {
   return recursiveFibonacci(n - 2) + recursiveFibonacci(n - 1);
 }
 //recibonacci(6)
+
+
+/////Pipeline function with Recursive implementation////////////////////
+function pipeline(...functions) {
+  if (length(functions) === 0) return input => input;
+  if (length(functions) === 1) return input => head(functions)(input);
+  return function(input) {
+    return pipeline(...tail(functions))(head(functions)(input));
+  };
+}
+
+pluralize = singularWord => singularWord + 's'
+heart = word => "I ❤️ " + word
+exclaim = sentence => sentence + "!"
+
+showSomeLove = pipeline(pluralize, heart, exclaim);
+
+pipelineLove = showSomeLove('pipeline')
+functionLove = showSomeLove('pure function')
+////////////////////////////////////////////
